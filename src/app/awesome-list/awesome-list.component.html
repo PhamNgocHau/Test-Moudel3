@@ -1,0 +1,29 @@
+<h1 style="padding-left: 30px;margin-top: 30px;color: blue;font-family: .VnTime">My Awesome List</h1>
+<br>
+<br>
+<button type="button" class="btn btn-primary" routerLink="add-awesome">Add Awesome</button>
+<br>
+<br>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#ID</th>
+    <th scope="col">Tag</th>
+    <th scope="col">URL</th>
+    <th scope="col">DESCRIPTIONS</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let awesome of awesomeList">
+    <td scope="row">{{awesome.id}}</td>
+    <td>{{awesome.tag}}</td>
+    <td>{{awesome.url}}</td>
+    <td>{{awesome.descriptions}}</td>
+    <td><button [routerLink]="['/edit-awesome', awesome.id]">Edit</button></td>
+    <td>
+      <button type="submit" (click)="deleteAwesome(awesome.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

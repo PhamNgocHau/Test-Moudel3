@@ -1,0 +1,43 @@
+<form #awesomeForm="ngForm" (ngSubmit)="onSubmit(awesomeForm)">
+  <table>
+    <div class="form-group">
+      <label>
+        <input type="hidden" [(ngModel)]="awesome.id" name="id" ngModel class="form-control"/>
+      </label>
+    </div>
+
+    <tr class="form-group">
+      <th>
+        <label>Title:</label>
+      </th>
+      <td>
+        <label>
+          <input type="text" [(ngModel)]="awesome.tag" name="tag" ngModel class="form-control"/>
+        </label>
+      </td>
+    </tr>
+    <tr class="form-group">
+      <th>
+        <label>Author:</label>
+      </th>
+      <td>
+        <label>
+          <input type="text" [(ngModel)]="awesome.url" name="url" ngModel class="form-control"/>
+        </label>
+      </td>
+    </tr>
+    <tr class="form-group">
+      <th>
+        <label>Description:</label>
+      </th>
+      <td>
+        <label>
+          <textarea type="text" [(ngModel)]="awesome.descriptions" name="description" ngModel class="form-control"></textarea>
+        </label>
+      </td>
+    </tr>
+  </table>
+  <div>
+    <button type="submit" class="btn btn-success" style="margin-left: 100px">Cập Nhật</button>
+  </div>
+</form>

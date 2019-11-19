@@ -1,0 +1,38 @@
+<div *ngIf="isSuccess" class="alert alert-success" role="alert">
+  Đã thêm video thành công!
+</div>
+
+<form [formGroup]="awesomeForm" (ngSubmit)="onSubmit()" >
+  <div class="form-group">
+    <label for="exampleInputID">ID</label>
+    <input type="hidden" class="form-control" id="exampleInputID" placeholder="Enter ID"
+           formControlName="id"
+    >
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputTitle">Tag</label>
+    <input type="text" class="form-control" id="exampleInputTitle" placeholder="Title"
+           formControlName="tag"
+    >
+  </div>
+  <div class="form-group">
+    <label for="exampleInputUrl">Url</label>
+    <input type="text" class="form-control" id="exampleInputUrl" placeholder="Enter Author"
+           formControlName="url"
+    >
+    <small id="UrlHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputDescriptions">Descriptions</label>
+    <input type="text" class="form-control" id="exampleInputDescriptions" placeholder="Enter Author"
+           formControlName="descriptions"
+    >
+    <small id="authorHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
